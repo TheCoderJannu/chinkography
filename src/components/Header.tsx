@@ -24,6 +24,7 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        {/* Brand */}
         <div
           className="flex items-center gap-2 cursor-pointer group"
           onClick={() => scrollToSection('hero')}
@@ -37,7 +38,7 @@ export default function Header() {
             <div className="absolute inset-0 bg-red-600 blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
           </div>
           <span
-            className={`text-2xl font-bold tracking-wider transition-all duration-300 ${
+            className={`text-xl sm:text-2xl md:text-2xl lg:text-2xl font-bold tracking-wider transition-all duration-300 ${
               scrolled ? 'text-red-600' : 'text-white'
             }`}
           >
@@ -45,6 +46,7 @@ export default function Header() {
           </span>
         </div>
 
+        {/* Nav Links */}
         <nav className="hidden md:flex gap-8">
           {['Home', 'Gallery', 'About', 'Contact'].map((item) => (
             <button
@@ -60,8 +62,9 @@ export default function Header() {
           ))}
         </nav>
 
-        <button className="px-6 py-2 bg-red-600 text-white font-semibold rounded-full hover:bg-red-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-600/50">
-          Let's Work
+        {/* Action Button */}
+        <button className="whitespace-nowrap px-3 sm:px-4 py-1.5 sm:py-2 bg-red-600 text-white font-semibold rounded-full hover:bg-red-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-600/50 text-xs sm:text-sm md:text-base lg:text-base">
+          let's Talk
         </button>
       </div>
     </header>
