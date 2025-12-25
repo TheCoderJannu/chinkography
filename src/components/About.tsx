@@ -18,7 +18,7 @@ export default function About() {
           <div className="relative group">
             <div className="absolute inset-0 bg-red-600 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
             <img
-              src="imgs/aboutmeimg.webp"
+              src="/imgs/aboutmeimg.webp"
               alt="Photographer"
               className="relative rounded-3xl shadow-2xl w-full h-[500px] object-cover transform -rotate-3 group-hover:-rotate-6 transition-transform duration-500"
             />
