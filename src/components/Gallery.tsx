@@ -15,116 +15,120 @@ export default function Gallery() {
   const [selectedMedia, setSelectedMedia] = useState<MediaItem | null>(null);
 
   const mediaItems: MediaItem[] = [
+    { id: 1, type: 'image', url: 'src/imgs/1stofit (2).webp', title: 'Urban Portrait', category: 'portrait' },
+    { id: 2, type: 'image', url: 'src/imgs/2ndofit.webp', title: 'Fashion Editorial', category: 'fashion' },
+    { id: 3, type: 'image', url: 'src/imgs/3rdofit.webp', title: 'Fashion Editorial', category: 'fashion' },
+
     {
-      id: 1,
-      type: 'image',
-      url: 'src/firstimg.jpg',
-      title: 'Urban Portrait',
-      category: 'portrait',
-    },
-    {
-      id: 2,
-      type: 'image',
-      url: 'src/2ndimg.jpg',
-      title: 'Fashion Editorial',
-      category: 'fashion',
-    },
-    {
-      id: 3,
+      id: 4,
       type: 'video',
-      url: 'https://videos.pexels.com/video-files/3045163/3045163-uhd_2560_1440_25fps.mp4',
-      thumbnail: 'https://images.pexels.com/photos/3045163/pexels-photo-3045163.jpeg',
+      url: 'https://drive.google.com/file/d/1rdKKU2XAHYT07Z3fkFNOdjQxhZLuT_FY/view?usp=drive_link',
+      thumbnail: 'src/imgs/4thofit.PNG',
       title: 'Cinematic Reel',
       category: 'video',
     },
     {
-      id: 4,
-      type: 'image',
-      url: 'src/3rdimg.jpg',
-      title: 'Lifestyle',
-      category: 'lifestyle',
-    },
-    {
       id: 5,
-      type: 'image',
-      url: 'src/4thimg.jpg',
-      title: 'Street Photography',
-      category: 'street',
+      type: 'video',
+      url: 'https://drive.google.com/file/d/1KbX5QDDm5se1Ny9qfPQ3Z4THvBpDM2Xl/view?usp=drive_link',
+      thumbnail: 'src/imgs/5thofit.PNG',
+      title: 'Cinematic Reel',
+      category: 'video',
     },
     {
       id: 6,
       type: 'video',
-      url: 'https://videos.pexels.com/video-files/4621023/4621023-uhd_2560_1440_25fps.mp4',
-      thumbnail: 'https://images.pexels.com/photos/4621023/pexels-photo-4621023.jpeg',
+      url: 'https://drive.google.com/file/d/1D9t_z2mqbDOo6oBWw0t81ZfcrXEpu-Of/view?usp=drive_link',
+      thumbnail: 'src/imgs/6thofit.PNG',
+      title: 'Cinematic Reel',
+      category: 'video',
+    },
+
+    { id: 7, type: 'image', url: 'src/imgs/7thofit.webp', title: 'Urban Portrait', category: 'portrait' },
+    { id: 8, type: 'image', url: 'src/imgs/8thofit.webp', title: 'Fashion Editorial', category: 'fashion' },
+    { id: 9, type: 'image', url: 'src/imgs/9thofit.webp', title: 'Fashion Editorial', category: 'fashion' },
+     {
+      id: 10,
+      type: 'video',
+      url: 'https://drive.google.com/file/d/1G_IBjtOFUadywp6JyvptTwILsuInsm0C/view?usp=drive_link',
+      thumbnail: 'src/imgs/10thit.PNG',
       title: 'Motion Graphics',
       category: 'video',
     },
     {
-      id: 7,
-      type: 'image',
-      url: 'src/5th.jpg',
-      title: 'Portrait Art',
-      category: 'portrait',
-    },
-    {
-      id: 8,
-      type: 'image',
-      url: 'src/6th.jpg',
-      title: 'Fashion Week',
-      category: 'fashion',
-    },
-    {
-      id: 9,
-      type: 'image',
-      url: 'src/7th.jpg',
-      title: 'Fashion Week',
-      category: 'fashion',
-    },
-    {
-      id: 10,
-      type: 'image',
-      url: 'src/8th.jpg',
-      title: 'Fashion Week',
-      category: 'fashion',
-    },
-    {
       id: 11,
-      type: 'image',
-      url: 'src/9th.jpg',
-      title: 'Fashion Week',
-      category: 'fashion',
-    },
-    {
+      type: 'video',
+      url: 'https://drive.google.com/file/d/1Qv_M4sF819J6luLFz8jIODM17JuBV6Jo/view?usp=drive_link',
+      thumbnail: 'src/imgs/11thofit.PNG',
+      title: 'Motion Graphics',
+      category: 'video',
+    },{
       id: 12,
-      type: 'image',
-      url: 'src/10th.jpg',
-      title: 'Fashion Week',
-      category: 'fashion',
+      type: 'video',
+      url: 'https://drive.google.com/file/d/149HG9UmKbCDLePE_jkZaMuMXLri7ey2d/view?usp=drive_link',
+      thumbnail: 'src/imgs/12thofit.PNG',
+      title: 'Motion Graphics',
+      category: 'video',
+    },
+
+    { id: 13, type: 'image', url: 'src/imgs/13thofit.webp', title: 'Portrait Art', category: 'portrait' },
+    { id: 14, type: 'image', url: 'src/imgs/14thofit.webp', title: 'Fashion Week', category: 'fashion' },
+    { id: 15, type: 'image', url: 'src/imgs/15thofit.webp', title: 'Fashion Week', category: 'fashion' },
+      {
+      id: 16,
+      type: 'video',
+      url: 'https://drive.google.com/file/d/1u3a6VNTEApy6qbpDI_-U76vT-A8VAJg0/view?usp=drive_link',
+      thumbnail: 'src/imgs/16thofit.PNG',
+      title: 'Motion Graphics',
+      category: 'video',
     },
     {
-      id: 13,
-      type: 'image',
-      url: 'src/11th.jpg',
-      title: 'Fashion Week',
-      category: 'fashion',
+      id: 17,
+      type: 'video',
+      url: 'https://drive.google.com/file/d/1E5EKEyOhh2oEWrj4R7_C5IDPUxMY4oFn/view?usp=drive_link',
+      thumbnail: 'src/imgs/17thofit.PNG',
+      title: 'Motion Graphics',
+      category: 'video',
+    },{
+      id: 18,
+      type: 'video',
+      url: 'https://drive.google.com/file/d/1sDHhSeYUt5ODwXZ4gBNKmcakoarJdkLy/view?usp=drive_link',
+      thumbnail: 'src/imgs/18thofit.PNG',
+      title: 'Motion Graphics',
+      category: 'video',
+    },
+    { id: 19, type: 'image', url: 'src/imgs/19thofit.webp', title: 'Portrait Art', category: 'portrait' },
+    { id: 20, type: 'image', url: 'src/imgs/20thofit.webp', title: 'Fashion Week', category: 'fashion' },
+    { id: 21, type: 'image', url: 'src/imgs/21thofit.webp', title: 'Fashion Week', category: 'fashion' },
+    {
+      id: 22,
+      type: 'video',
+      url: 'https://drive.google.com/file/d/1tc-T8SUuGuHD_d9C6okJ6aHkgVjrtDgl/view?usp=drive_link',
+      thumbnail: 'src/imgs/22ndofit.PNG',
+      title: 'Motion Graphics',
+      category: 'video',
     },
     {
-      id: 14,
-      type: 'image',
-      url: 'src/12th.jpg',
-      title: 'Fashion Week',
-      category: 'fashion',
+      id: 23,
+      type: 'video',
+      url: 'https://drive.google.com/file/d/13Gb-6up4nytrK-i8OugmkZzmc0nDBmSh/view?usp=drive_link',
+      thumbnail: 'src/imgs/23rdofit.PNG',
+      title: 'Motion Graphics',
+      category: 'video',
+    },{
+      id: 24,
+      type: 'video',
+      url: 'https://drive.google.com/file/d/1OdgHHF9PInYFTakU-TyhIsF_iHFkzFBg/view?usp=drive_link',
+      thumbnail: 'src/imgs/25thofit.PNG',
+      title: 'Motion Graphics',
+      category: 'video',
     },
-    {
-      id: 15,
-      type: 'image',
-      url: 'src/13th.jpg',
-      title: 'Fashion Week',
-      category: 'fashion',
-    },
+    { id: 25, type: 'image', url: 'src/imgs/25thofit.webp', title: 'Portrait Art', category: 'portrait' },
+    { id: 26, type: 'image', url: 'src/imgs/26thofit.webp', title: 'Fashion Week', category: 'fashion' },
+    { id: 27, type: 'image', url: 'src/imgs/27thofit.webp', title: 'Fashion Week', category: 'fashion' },
   ];
 
-  const categories = ['all', 'portrait', 'fashion', 'lifestyle', 'street', 'video'];
+  const categories = ['all', 'portrait', 'fashion', 'video'];
 
   const filteredItems =
     selectedCategory === 'all'
@@ -133,22 +137,25 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-7xl font-black text-gray-900 mb-4 tracking-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 mb-4">
             MY <span className="text-red-600">WORK</span>
           </h2>
           <div className="w-24 h-1 bg-red-600 mx-auto"></div>
         </div>
 
+        {/* Filters */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 font-semibold rounded-full transition-all duration-300 transform hover:scale-105 uppercase tracking-wide ${
+              className={`px-6 py-3 rounded-full font-semibold uppercase transition-all ${
                 selectedCategory === category
-                  ? 'bg-red-600 text-white shadow-lg shadow-red-600/50'
+                  ? 'bg-red-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -157,33 +164,41 @@ export default function Gallery() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item, index) => (
+        {/* GRID */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+          {filteredItems.map((item) => (
             <div
               key={item.id}
-              onClick={() => setSelectedMedia(item)}
-              className="group relative aspect-square overflow-hidden rounded-2xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl"
-              style={{
-                animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
+              onClick={() => {
+                if (item.type === 'video') {
+                  window.open(item.url, '_blank');
+                } else {
+                  setSelectedMedia(item);
+                }
               }}
+              className="group relative aspect-square overflow-hidden rounded-2xl cursor-pointer transition-all hover:scale-105 hover:shadow-2xl"
             >
               <img
                 src={item.type === 'video' ? item.thumbnail : item.url}
                 alt={item.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-white font-bold text-xl mb-2">{item.title}</h3>
-                  <p className="text-red-400 text-sm uppercase tracking-wide">{item.category}</p>
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all">
+                <div className="absolute bottom-0 p-4">
+                  <h3 className="text-white font-bold">{item.title}</h3>
+                  <p className="text-red-400 text-xs uppercase">
+                    {item.type === 'video' ? 'Opens on Google Drive' : item.category}
+                  </p>
                 </div>
               </div>
 
+              {/* Play Icon */}
               {item.type === 'video' && (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:scale-125 group-hover:bg-red-700">
-                    <Play className="w-8 h-8 text-white ml-1" fill="white" />
+                  <div className="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center">
+                    <Play className="w-7 h-7 text-white ml-1" fill="white" />
                   </div>
                 </div>
               )}
@@ -192,71 +207,26 @@ export default function Gallery() {
         </div>
       </div>
 
+      {/* IMAGE MODAL ONLY */}
       {selectedMedia && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-6 animate-fade-in"
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
           onClick={() => setSelectedMedia(null)}
         >
           <button
-            className="absolute top-6 right-6 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-all duration-300 hover:scale-110"
+            className="absolute top-6 right-6 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center"
             onClick={() => setSelectedMedia(null)}
           >
             <X className="w-6 h-6 text-white" />
           </button>
 
-          <div
-            className="max-w-5xl max-h-[90vh] animate-scale-in"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {selectedMedia.type === 'image' ? (
-              <img
-                src={selectedMedia.url}
-                alt={selectedMedia.title}
-                className="max-w-full max-h-[85vh] rounded-lg shadow-2xl"
-              />
-            ) : (
-              <video
-                src={selectedMedia.url}
-                controls
-                autoPlay
-                className="max-w-full max-h-[85vh] rounded-lg shadow-2xl"
-              />
-            )}
-            <div className="text-center mt-6">
-              <h3 className="text-white text-2xl font-bold mb-2">{selectedMedia.title}</h3>
-              <p className="text-red-400 uppercase tracking-wide">{selectedMedia.category}</p>
-            </div>
-          </div>
+          <img
+            src={selectedMedia.url}
+            alt={selectedMedia.title}
+            className="max-w-full max-h-[85vh] rounded-lg shadow-2xl"
+          />
         </div>
       )}
-
-      <style>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes scale-in {
-          from {
-            opacity: 0;
-            transform: scale(0.9);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-
-        .animate-scale-in {
-          animation: scale-in 0.3s ease-out;
-        }
-      `}</style>
     </section>
   );
 }

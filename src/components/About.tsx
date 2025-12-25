@@ -44,9 +44,18 @@ time and within budget. Committed to excellence in media production and dedicate
 narratives.
             </p>
 
-            <button className="px-8 py-4 bg-red-600 text-white font-bold rounded-full hover:bg-red-700 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-red-600/50">
-              Download Resume
-            </button>
+            <a
+  href="/Meet_Suthar_Resume.pdf"
+  download
+  className="inline-block"
+>
+  <button className="px-8 py-4 bg-red-600 text-white font-bold rounded-full hover:bg-red-700 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-red-600/50">
+    Download Resume
+  </button>
+</a>
+
+
+
           </div>
         </div>
 
