@@ -33,7 +33,7 @@ export default function About() {
             <div className="w-24 h-1 bg-red-600 mb-8"></div>
 
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Experienced Cinematographer with a robust background in film production, graphic designing, editing, and exemplary customer service.
+              Experienced  Cinematographer with a robust background in film production, graphic designing, editing, and exemplary customer service.
 Proficient in fostering positive client relationships and delivering exceptional outcomes. Adept at managing studio operations for eleven
 years, ensuring efficient workflows and client satisfaction. Skilled in public relations, effectively communicating with clients, vendors, and
 team members to facilitate smooth project execution.

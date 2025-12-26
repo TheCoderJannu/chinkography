@@ -381,7 +381,8 @@ export default function Contact() {
                   </a>
                 );
               })}
-            </div>
+            </div>   
+            
 
             <h4 className="text-xl font-bold mb-6">Follow Us</h4>
             <div className="flex gap-4">
