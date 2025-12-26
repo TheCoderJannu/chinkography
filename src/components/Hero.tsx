@@ -165,7 +165,7 @@ export default function Hero() {
 
         {/* Tagline */}
         <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-12 animate-fade-in">
-          I SEE WHAT YOU CAN&apos;T
+          WE SEE WHAT YOU CAN&apos;T
         </p>
 
         {/* Buttons */}
@@ -176,7 +176,7 @@ export default function Hero() {
             }
             className="whitespace-nowrap px-6 sm:px-8 py-3 sm:py-4 bg-red-600 text-white font-bold rounded-full hover:bg-red-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-600/50"
           >
-            View My Work
+            View Our Work
           </button>
 
           <button
@@ -191,9 +191,14 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-        <ChevronDown className="w-8 h-8 text-white" />
-      </div>
+<a
+  href="#gallery"
+  className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer"
+  aria-label="Scroll to gallery"
+>
+  <ChevronDown className="w-8 h-8 text-white hover:text-red-500 transition-colors" />
+</a>
+
 
       {/* Animations */}
       <style>{`

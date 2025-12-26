@@ -348,7 +348,7 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            You tell me what you need, and I&apos;ll tell you how to execute it creatively
+            You tell us what you need, and We&apos;ll tell you how to execute it creatively
           </p>
         </div>
 
@@ -383,7 +383,7 @@ export default function Contact() {
               })}
             </div>
 
-            <h4 className="text-xl font-bold mb-6">Follow Me</h4>
+            <h4 className="text-xl font-bold mb-6">Follow Us</h4>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => {
                 const Icon = social.icon;

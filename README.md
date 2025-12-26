@@ -120,11 +120,10 @@ Analytics dashboard
 
 👤 Author
 
-Param Suthar
+Janhvi Suthar
 Product Designer & Full-Stack Developer
-🌐 https://param.p6s.in
 
-📩 contact@p6s.in
+📩 janhvisuthar12@gmail.com
 
 📜 License
 
