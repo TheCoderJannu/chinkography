@@ -57,7 +57,7 @@ export default function Qualifications() {
       {/* SECTION 3 */}
       <div className="grid md:grid-cols-2 items-center gap-10 px-8 md:px-16 mb-24">
         <img
-          src="public/imgs/qualification-3 (2).JPG"
+          src="/imgs/qualification-3 (2).JPG"
           alt="Visual Storytelling"
           className="w-full max-h-[380px] object-cover rounded-3xl"
         />
