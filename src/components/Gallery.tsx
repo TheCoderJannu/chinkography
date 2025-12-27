@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface MediaItem {
   id: number;
@@ -239,8 +240,8 @@ export default function Gallery() {
         </div>
       )}{/* VIEW ALL BUTTON */}
 <div className="flex justify-center mt-20 pb-24">
-  <a
-    href="/my-works"
+  <Link
+    to="/my-works"
     className="group inline-flex items-center gap-3 px-10 py-4 
                bg-red-600 text-white font-bold tracking-widest
                rounded-full uppercase text-sm
@@ -252,8 +253,9 @@ export default function Gallery() {
     <span className="transition-transform duration-300 group-hover:translate-x-1">
       →
     </span>
-  </a>
+  </Link>
 </div>
+
     </section>
   );
 }

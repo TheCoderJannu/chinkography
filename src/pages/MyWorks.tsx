@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
 
+
 interface MediaItem {
   id: number;
   type: 'image' | 'video';
@@ -272,18 +273,6 @@ export default function MyWorks() {
     { id: 130, type: 'image', url: '/imgs/130thofit.webp', title: 'Party People', category: 'portrait' },
     { id: 131, type: 'image', url: '/imgs/131thofit.webp', title: 'Magician', category: 'portrait' },
     { id: 132, type: 'image', url: '/imgs/132thofit.webp', title: 'Party People', category: 'candids' },
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -348,7 +348,7 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            You tell me what you need, and We&apos;ll tell you how to execute it creatively
+            You tell me what you need, and I&apos;ll tell you how to execute it creatively
           </p>
         </div>
 

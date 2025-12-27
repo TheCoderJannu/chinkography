@@ -9,13 +9,13 @@ import Contact from './components/Contact';
 import Qualifications from './pages/Qualifications';
 import MyWorks from './pages/MyWorks';
 
-/* 🔥 Scroll reset on route change */
+/* 🔥 Scroll to top on every route change */
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+  }, [location.pathname]);
 
   return null;
 }
@@ -50,7 +50,17 @@ function App() {
           <Route path="/qualifications" element={<Qualifications />} />
 
           {/* MY WORKS */}
-          <Route path="/my-works" element={<MyWorks/>} />
+          <Route path="/my-works" element={<MyWorks />} />
+
+          {/* FALLBACK (optional but recommended) */}
+          <Route
+            path="*"
+            element={
+              <div className="min-h-screen flex items-center justify-center text-2xl font-bold">
+                Page Not Found
+              </div>
+            }
+          />
         </Routes>
       </div>
     </BrowserRouter>
