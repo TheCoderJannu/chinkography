@@ -148,7 +148,7 @@ export default function Hero() {
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
         {/* Title */}
         <div className="overflow-hidden mb-6">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight animate-slide-up">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight ">
             CHINKOGRAPHY
           </h1>
         </div>
