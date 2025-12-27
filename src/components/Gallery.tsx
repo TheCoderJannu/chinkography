@@ -25,7 +25,7 @@ export default function Gallery() {
       url: 'https://drive.google.com/file/d/1rdKKU2XAHYT07Z3fkFNOdjQxhZLuT_FY/view',
       thumbnail: '/imgs/4thofit.PNG',
       title: 'Brand Promo',
-      category: 'video',
+      category: 'talkingheads',
     },
     {
       id: 5,
@@ -33,7 +33,7 @@ export default function Gallery() {
       url: 'https://drive.google.com/file/d/1KbX5QDDm5se1Ny9qfPQ3Z4THvBpDM2Xl/view',
       thumbnail: '/imgs/5thofit.PNG',
       title: 'A story of a Realtor',
-      category: 'video',
+      category: 'talkingheads',
     },
     {
       id: 6,
@@ -41,7 +41,7 @@ export default function Gallery() {
       url: 'https://drive.google.com/file/d/1D9t_z2mqbDOo6oBWw0t81ZfcrXEpu-Of/view',
       thumbnail: '/imgs/6thofit.PNG',
       title: 'Brand Promo',
-      category: 'video',
+      category: 'talkingheads',
     },
 
     { id: 7, type: 'image', url: '/imgs/7thofit.webp', title: 'Foodcourt@YVR', category: 'Urbans' },
@@ -55,7 +55,7 @@ export default function Gallery() {
   url: 'https://drive.google.com/file/d/1G_IBjtOFUadywp6JyvptTwILsuInsm0C/view?usp=drive_link',
   thumbnail: '/imgs/10thofit.PNG',
   title: 'Informational Reel',
-  category: 'video', 
+  category: 'Talkingheads', 
 },
 { 
   id: 11, 
@@ -63,7 +63,7 @@ export default function Gallery() {
   url: 'https://drive.google.com/file/d/1Qv_M4sF819J6luLFz8jIODM17JuBV6Jo/view?usp=drive_link', 
   thumbnail: '/imgs/11thofit.PNG', 
   title: 'Informational Reel', 
-  category: 'video', 
+  category: 'Talkingheads', 
 },
 { 
   id: 12, 
@@ -71,7 +71,7 @@ export default function Gallery() {
   url: 'https://drive.google.com/file/d/149HG9UmKbCDLePE_jkZaMuMXLri7ey2d/view?usp=drive_link', 
   thumbnail: '/imgs/12thofit.PNG', 
   title: 'Shivesh_Food Vlogger', 
-  category: 'video', 
+  category: 'Talkingheads', 
 }, 
 
 { id: 13, type: 'image', url: '/imgs/13thofit.webp', title: 'Lowered Whips', category: 'Automobiles' },
@@ -84,7 +84,7 @@ export default function Gallery() {
   url: 'https://drive.google.com/file/d/1u3a6VNTEApy6qbpDI_-U76vT-A8VAJg0/view?usp=drive_link', 
   thumbnail: '/imgs/16thofit.PNG', 
   title: 'Music Video_MMA', 
-  category: 'video', 
+  category: 'Music Video', 
 }, 
  { 
   id: 17, 
@@ -92,14 +92,14 @@ export default function Gallery() {
   url: 'https://drive.google.com/file/d/1E5EKEyOhh2oEWrj4R7_C5IDPUxMY4oFn/view?usp=drive_link', 
   thumbnail: '/imgs/17thofit.PNG', 
   title: 'Music Video_Hollywood', 
-  category: 'video', 
+  category: 'Music Video', 
 },
  { 
   id: 18, type: 'video', 
   url: 'https://drive.google.com/file/d/1sDHhSeYUt5ODwXZ4gBNKmcakoarJdkLy/view?usp=drive_link', 
   thumbnail: '/imgs/18thofit.PNG', 
   title: 'Music Video_Jewellery Promo', 
-  category: 'video', 
+  category: 'Music Video', 
 }, 
  
  { id: 19, type: 'image', url: '/imgs/19thofit.webp', title: 'Artist in Motion', category: 'candids' }, 
@@ -111,7 +111,7 @@ export default function Gallery() {
     url: 'https://drive.google.com/file/d/1tc-T8SUuGuHD_d9C6okJ6aHkgVjrtDgl/view?usp=drive_link', 
     thumbnail: '/imgs/22ndofit.PNG', 
     title: 'Fashion Brand@DeeClothing', 
-    category: 'video', 
+    category: 'BRAND PROMO', 
   },
    { 
     id: 23, 
@@ -119,7 +119,7 @@ export default function Gallery() {
     url: 'https://drive.google.com/file/d/13Gb-6up4nytrK-i8OugmkZzmc0nDBmSh/view?usp=drive_link', 
     thumbnail: '/imgs/23rdofit.PNG', 
     title: 'Fashion Brand@DeeClothing', 
-    category: 'video', 
+    category: 'BRAND PROMO', 
   },
    { 
     id: 24, 
@@ -127,7 +127,7 @@ export default function Gallery() {
     url: 'https://drive.google.com/file/d/1OdgHHF9PInYFTakU-TyhIsF_iHFkzFBg/view?usp=drive_link', 
     thumbnail: '/imgs/24thofit.PNG', 
     title: 'Fashion Brand@DeeClothing', 
-    category: 'video', 
+    category: 'BRAND PROMO', 
   }, 
    
    { id: 25, type: 'image', url: '/imgs/25thofit.webp', title: 'Party People', category: 'candids' }, 
@@ -135,7 +135,7 @@ export default function Gallery() {
    { id: 27, type: 'image', url: '/imgs/27thofit.webp', title: 'Party People', category: 'candids' },
   ];
 
-  const categories = ['all', 'portrait', 'fashion', 'video'];
+  const categories = ['all', 'video', 'candids', 'Urbans', 'Automobiles'];
 
   const filteredItems =
     selectedCategory === 'all'
@@ -149,7 +149,7 @@ export default function Gallery() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 mb-4">
-            OUR <span className="text-red-600">WORK</span>
+            MY <span className="text-red-600">WORKS</span>
           </h2>
           <div className="w-24 h-1 bg-red-600 mx-auto"></div>
         </div>
@@ -199,8 +199,9 @@ export default function Gallery() {
                     {item.title}
                   </h3>
                   <p className="text-red-400 text-xs uppercase">
-                    {item.type === 'video' ? 'Opens on Google Drive' : item.category}
-                  </p>
+  {item.category}
+</p>
+
                 </div>
               </div>
 
@@ -236,7 +237,23 @@ export default function Gallery() {
             className="max-w-full max-h-[85vh] rounded-lg shadow-2xl"
           />
         </div>
-      )}
+      )}{/* VIEW ALL BUTTON */}
+<div className="flex justify-center mt-20 pb-24">
+  <a
+    href="/my-works"
+    className="group inline-flex items-center gap-3 px-10 py-4 
+               bg-red-600 text-white font-bold tracking-widest
+               rounded-full uppercase text-sm
+               transition-all duration-300
+               hover:bg-red-700 hover:scale-105
+               hover:shadow-xl hover:shadow-red-600/40"
+  >
+    View All
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+</div>
     </section>
   );
 }

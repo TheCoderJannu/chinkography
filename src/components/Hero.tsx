@@ -165,7 +165,7 @@ export default function Hero() {
 
         {/* Tagline */}
         <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-12 animate-fade-in">
-          WE SEE WHAT YOU CAN&apos;T
+          I SEE WHAT YOU CAN&apos;T
         </p>
 
         {/* Buttons */}
@@ -176,7 +176,7 @@ export default function Hero() {
             }
             className="whitespace-nowrap px-6 sm:px-8 py-3 sm:py-4 bg-red-600 text-white font-bold rounded-full hover:bg-red-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-600/50"
           >
-            View Our Work
+            View My Work
           </button>
 
           <button
