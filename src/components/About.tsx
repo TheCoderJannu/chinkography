@@ -33,17 +33,13 @@ export default function About() {
             <div className="w-24 h-1 bg-red-600 mb-8"></div>
 
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Experienced  Cinematographer with a robust background in film production, graphic designing, editing, and exemplary customer service.
-Proficient in fostering positive client relationships and delivering exceptional outcomes. Adept at managing studio operations for eleven
-years, ensuring efficient workflows and client satisfaction. Skilled in public relations, effectively communicating with clients, vendors, and
-team members to facilitate smooth project execution.
+              Visual storytelling has been part of my life long before it became my profession. Raised around photography through my father’s work, I developed an early appreciation for composition, detail, and emotion. In 2016, I formally began my journey behind the camera—driven not by trends, but by the pursuit of refined, intentional visuals that communicate more than words ever could.
+
             </p>
 
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              Proven ability to lead creative teams and collaborate to achieve project objectives on
-time and within budget. Committed to excellence in media production and dedicated to enhancing storytelling through captivating visual
-
-narratives.
+              
+That pursuit led me to Canada, where I earned a Film Production degree from the University of Regina, mastering cinematography, editing, and narrative design. Today, as the founder of Chinkography, I collaborate with brands, creators, and businesses to craft cinematic visuals built for impact and longevity. With a strong portfolio, millions of organic views, and a growing international client base, my work sits at the intersection of storytelling, strategy, and visual excellence.
             </p>
 
             <a

@@ -1,116 +1,158 @@
 import { Camera } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Router-safe smooth scroll
-  const handleNavClick = (id: string) => {
+  const goHomeSection = (id: string) => {
+    setMenuOpen(false); // RESET LOGO + HAMBURGER TO WHITE
+
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-      }, 300);
+      }, 400);
     } else {
       document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'bg-white shadow-lg py-4' : 'bg-transparent py-6'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+    <>
+      {/* ================= DESKTOP HEADER ================= */}
+      <header
+        className={`fixed top-0 inset-x-0 z-50 hidden md:block
+        transition-all duration-700
+        ${scrolled ? 'bg-white/5 backdrop-blur-xl shadow-lg py-4' : 'bg-transparent py-6'}`}
+      >
+        <div className="max-w-7xl mx-auto px-8 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-3">
+            <Camera className="w-7 h-7 text-red-600" />
+            <span className="text-lg tracking-[0.2em] text-red-600 font-semibold">
+              CHINKOGRAPHY
+            </span>
+          </Link>
 
-        {/* BRAND */}
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="relative">
-            <Camera
-              className={`w-8 h-8 transition-all duration-300 group-hover:rotate-12 ${
-                scrolled ? 'text-red-600' : 'text-white'
-              }`}
-            />
-            <div className="absolute inset-0 bg-red-600 blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
-          </div>
+          <nav className="flex gap-10">
+            <NavItem label="Home" onClick={() => goHomeSection('home')} />
+            <NavItem label="Gallery" onClick={() => goHomeSection('gallery')} />
+            <NavItem label="About" onClick={() => goHomeSection('about')} />
+            <NavItem label="Contact" onClick={() => goHomeSection('contact')} />
+            <Link to="/my-works" className="nav-link text-red-600 hover:text-red-600">My Works</Link>
+            <Link to="/qualifications" className="nav-link text-red-600 hover:text-red-600">Qualifications</Link>
+          </nav>
+        </div>
+      </header>
 
-          <span
-            className={`text-xl sm:text-2xl font-bold tracking-wider transition-all duration-300 ${
-              scrolled ? 'text-red-600' : 'text-white'
-            }`}
-          >
-            CHINKOGRAPHY
-          </span>
-        </Link>
-
-        {/* NAV LINKS */}
-        <nav className="hidden md:flex gap-8 items-center">
-          {[
-            { label: 'Home', id: 'home' },
-            { label: 'Gallery', id: 'gallery' },
-            { label: 'About', id: 'about' },
-            { label: 'Contact', id: 'contact' },
-          ].map((item) => (
-            <button
-              key={item.label}
-              onClick={() => handleNavClick(item.id)}
-              className={`relative text-sm font-semibold tracking-wide transition-all duration-300 group ${
-                scrolled ? 'text-gray-800' : 'text-white'
-              }`}
+      {/* ================= MOBILE HEADER ================= */}
+      <header
+        className={`md:hidden fixed top-0 inset-x-0 z-50
+        transition-all duration-700
+        ${scrolled ? 'bg-white/5 backdrop-blur-xl shadow-lg py-4' : 'bg-transparent py-6' }`}
+      >
+        <div className="px-6 flex items-center justify-between">
+          {/* LOGO */}
+          <Link to="/" className="flex items-center gap-2">
+            <Camera className="w-6 h-6 text-red-600" />
+            <span
+              className={`text-sm tracking-[0.25em] font-semibold
+              transition-colors duration-300
+              ${menuOpen ? 'text-red-600' : 'text-red-600'}`}
             >
-              {item.label}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 group-hover:w-full transition-all duration-300"></span>
-            </button>
-          ))}
+              CHINKOGRAPHY
+            </span>
+          </Link>
 
-          {/* MY WORKS (NEW PAGE) */}
+          {/* HAMBURGER */}
+          <button
+            onClick={() => setMenuOpen(prev => !prev)}
+            className="flex flex-col gap-1.5"
+          >
+            <span
+              className={`w-6 h-0.5 transition-all duration-300
+              ${menuOpen ? 'bg-red-600 rotate-45 translate-y-2' : 'bg-red-600'}`}
+            />
+            <span
+              className={`w-6 h-0.5 transition-all duration-300
+              ${menuOpen ? 'opacity-0' : 'bg-red-600'}`}
+            />
+            <span
+              className={`w-6 h-0.5 transition-all duration-300
+              ${menuOpen ? 'bg-red-600 -rotate-45 -translate-y-2' : 'bg-red-600'}`}
+            />
+          </button>
+        </div>
+      </header>
+
+      {/* ================= MOBILE MENU ================= */}
+      {menuOpen && (
+        <div
+          className="md:hidden fixed inset-0 z-40
+          bg-white/80 backdrop-blur-2xl
+          flex flex-col items-center justify-center gap-10
+          text-xl tracking-widest"
+        >
+          {/* ALL TEXT = RED */}
+          <MobileNav onClick={() => goHomeSection('home')}>Home</MobileNav>
+          <MobileNav onClick={() => goHomeSection('gallery')}>Gallery</MobileNav>
+          <MobileNav onClick={() => goHomeSection('about')}>About</MobileNav>
+          <MobileNav onClick={() => goHomeSection('contact')}>Contact</MobileNav>
+
           <Link
             to="/my-works"
-            className={`relative text-sm font-semibold tracking-wide transition-all duration-300 group ${
-              scrolled ? 'text-gray-800' : 'text-white'
-            }`}
+            onClick={() => setMenuOpen(false)}
+            className="nav-link text-red-600"
           >
             My Works
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 group-hover:w-full transition-all duration-300"></span>
           </Link>
 
-          {/* QUALIFICATIONS */}
           <Link
             to="/qualifications"
-            className={`relative text-sm font-semibold tracking-wide transition-all duration-300 group ${
-              scrolled ? 'text-gray-800' : 'text-white'
-            }`}
+            onClick={() => setMenuOpen(false)}
+            className="nav-link text-red-600"
           >
             Qualifications
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 group-hover:w-full transition-all duration-300"></span>
           </Link>
-        </nav>
+        </div>
+      )}
+    </>
+  );
+}
 
-        {/* LET'S TALK */}
-        <button
-          onClick={() => (window.location.href = 'mailto:chinkography@gmail.com')}
-          className="whitespace-nowrap px-3 sm:px-4 py-1.5 sm:py-2 
-                     bg-red-600 text-white font-semibold rounded-full 
-                     hover:bg-red-700 transition-all duration-300 
-                     hover:scale-105 hover:shadow-lg hover:shadow-red-600/50
-                     text-xs sm:text-sm md:text-base"
-        >
-          Let&apos;s Talk
-        </button>
+/* ================= COMPONENTS ================= */
 
-      </div>
-    </header>
+function NavItem({ label, onClick }: { label: string; onClick: () => void }) {
+  return (
+    <button onClick={onClick} className="nav-link text-red-600 hover:text-red-600">
+      {label}
+    </button>
+  );
+}
+
+function MobileNav({
+  children,
+  onClick,
+}: {
+  children: React.ReactNode;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className="nav-link text-red-600"
+    >
+      {children}
+    </button>
   );
 }

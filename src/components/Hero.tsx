@@ -117,11 +117,9 @@ export default function Hero() {
   const texts = [
     'CREATIVE DIRECTOR',
     'CINEMATOGRAPHER',
-    'SENIOR EDITOR',
+    'FILM EDITOR',
     'PHOTOGRAPHER',
-    'VISUAL ARTIST',
-    'STORY TELLER',
-    'CONTENT CREATOR',
+    'VISUAL STORY TELLER',
   ];
 
   // Text change interval
@@ -185,7 +183,7 @@ export default function Hero() {
             }
             className="whitespace-nowrap px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-red-600 transition-all duration-300 hover:scale-105"
           >
-            Get connected
+            Start a Project
           </button>
         </div>
       </div>
