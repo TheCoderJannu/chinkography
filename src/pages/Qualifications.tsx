@@ -116,10 +116,9 @@ Today, I work with multiple clients across platforms, crafting visuals designed 
           </div>
         </div>
       </div><br></br>
- <h3  className="  text-center ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Every frame I create carries the weight of where&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- I started—and the vision of where I’m going."
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </h3>
+ <h3  className="  text-center ">"Every frame I create carries the weight of where I started—and the vision of where I’m going."</h3>
+
+
  <br></br><br></br><br></br><br></br>
     </section>
   );
