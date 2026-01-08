@@ -103,18 +103,31 @@ export default function Header() {
 
       {/* ================= MOBILE MENU ================= */}
       {menuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 bg-white/80 backdrop-blur-2xl
-          flex flex-col items-center justify-center gap-10 text-xl tracking-widest">
-
+        <div
+          className="md:hidden fixed inset-0 z-40
+          bg-white/80 backdrop-blur-2xl
+          flex flex-col items-center justify-center gap-10
+          text-xl tracking-widest"
+        >
           <MobileNav onClick={() => goHomeSection('home')}>Home</MobileNav>
           <MobileNav onClick={() => goHomeSection('gallery')}>Gallery</MobileNav>
           <MobileNav onClick={() => goHomeSection('about')}>About</MobileNav>
           <MobileNav onClick={() => goHomeSection('contact')}>Contact</MobileNav>
 
-          <Link to="/my-works" className="nav-link text-red-600">
+          {/* 🔥 FIXED LINKS */}
+          <Link
+            to="/my-works"
+            onClick={() => setMenuOpen(false)}
+            className="nav-link text-red-600"
+          >
             My Works
           </Link>
-          <Link to="/qualifications" className="nav-link text-red-600">
+
+          <Link
+            to="/qualifications"
+            onClick={() => setMenuOpen(false)}
+            className="nav-link text-red-600"
+          >
             Qualifications
           </Link>
         </div>

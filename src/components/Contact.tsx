@@ -227,14 +227,14 @@ export default function Contact() {
           </form>
         </div>
       </div>
-
+ 
       {/* Footer */}
       <div className="text-center mt-20 pt-12 border-t border-gray-800">
         <p className="text-gray-400">© 2019 CHINKOGRAPHY. All rights reserved.</p>
       </div>
 
       <style>{`
-        .input {
+        .input { 
           width: 100%;
           padding: 1rem 1.5rem;
           background: rgba(31, 41, 55, 0.5);
