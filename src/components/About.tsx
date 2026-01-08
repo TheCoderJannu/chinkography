@@ -42,15 +42,18 @@ export default function About() {
 That pursuit led me to Canada, where I earned a Film Production degree from the University of Regina, mastering cinematography, editing, and narrative design. Today, as the founder of Chinkography, I collaborate with brands, creators, and businesses to craft cinematic visuals built for impact and longevity. With a strong portfolio, millions of organic views, and a growing international client base, my work sits at the intersection of storytelling, strategy, and visual excellence.
             </p>
 
-            <a
+           <a
   href="/Meet_Suthar_Resume.pdf"
-  download
-  className="inline-block"
+  target="_blank"
+  rel="noopener noreferrer"
 >
-  <button className="px-8 py-4 bg-red-600 text-white font-bold rounded-full hover:bg-red-700 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-red-600/50">
-    Download Resume
+  <button className="px-4 py-2 bg-red-600 text-white font-bold rounded-full 
+    hover:bg-red-700 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-red-600/50">
+    Resume
   </button>
 </a>
+
+
 
 
 

@@ -29,50 +29,71 @@ export default function Header() {
   };
 
   return (
-    <>
-      {/* ================= DESKTOP HEADER ================= */}
-      <header
-        className={`fixed top-0 inset-x-0 z-50 hidden md:block
-        transition-all duration-700
-        ${scrolled ? 'bg-white/5 backdrop-blur-xl shadow-lg py-4' : 'bg-transparent py-6'}`}
-      >
-        <div className="max-w-7xl mx-auto px-8 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
-            <Camera className="w-7 h-7 text-red-600" />
-            <span className="text-lg tracking-[0.2em] text-red-600 font-semibold">
-              CHINKOGRAPHY
-            </span>
-          </Link>
+    <>  
+   {/* ================= DESKTOP HEADER ================= */}
+<header
+  className={`fixed top-0 inset-x-0 z-50 hidden md:block
+  transition-all duration-700
+  ${scrolled ? 'bg-white/5 backdrop-blur-xl shadow-lg py-4' : 'bg-transparent py-6'}`}
+>
+  <div className="max-w-7xl mx-auto px-8 flex items-center justify-between">
+    <Link to="/" className="flex items-center gap-3">
+      {/* LOGO IMAGE */}
+      <img
+        src="/chinkography-logo.PNG"
+        alt="Chinkography Logo"
+        className="w-8 h-8 object-contain"
+      />
 
-          <nav className="flex gap-10">
-            <NavItem label="Home" onClick={() => goHomeSection('home')} />
-            <NavItem label="Gallery" onClick={() => goHomeSection('gallery')} />
-            <NavItem label="About" onClick={() => goHomeSection('about')} />
-            <NavItem label="Contact" onClick={() => goHomeSection('contact')} />
-            <Link to="/my-works" className="nav-link text-red-600 hover:text-red-600">My Works</Link>
-            <Link to="/qualifications" className="nav-link text-red-600 hover:text-red-600">Qualifications</Link>
-          </nav>
-        </div>
-      </header>
+      {/* BRAND NAME */}
+      <span className="text-lg tracking-[0.2em] text-red-600 font-semibold">
+        CHINKOGRAPHY
+      </span>
+    </Link>
+
+    <nav className="flex gap-10">
+      <NavItem label="Home" onClick={() => goHomeSection('home')} />
+      <NavItem label="Gallery" onClick={() => goHomeSection('gallery')} />
+      <NavItem label="About" onClick={() => goHomeSection('about')} />
+      <NavItem label="Contact" onClick={() => goHomeSection('contact')} />
+      <Link to="/my-works" className="nav-link text-red-600 hover:text-red-600">
+        My Works
+      </Link>
+      <Link to="/qualifications" className="nav-link text-red-600 hover:text-red-600">
+        Qualifications
+      </Link>
+    </nav>
+  </div>
+</header>
+
 
       {/* ================= MOBILE HEADER ================= */}
-      <header
-        className={`md:hidden fixed top-0 inset-x-0 z-50
-        transition-all duration-700
-        ${scrolled ? 'bg-white/5 backdrop-blur-xl shadow-lg py-4' : 'bg-transparent py-6' }`}
+<header
+  className={`md:hidden fixed top-0 inset-x-0 z-50
+  transition-all duration-700
+  ${scrolled ? 'bg-white/5 backdrop-blur-xl shadow-lg py-4' : 'bg-transparent py-6'}`}
+>
+  <div className="px-6 flex items-center justify-between">
+    {/* LOGO */}
+    <Link to="/" className="flex items-center gap-2">
+      {/* LOGO IMAGE */}
+      <img
+        src="/chinkography-logo.PNG"
+        alt="Chinkography Logo"
+        className="w-7 h-7 object-contain"
+      />
+
+      {/* BRAND NAME */}
+      <span
+        className="text-sm tracking-[0.25em] font-semibold text-red-600 transition-colors duration-300"
       >
-        <div className="px-6 flex items-center justify-between">
-          {/* LOGO */}
-          <Link to="/" className="flex items-center gap-2">
-            <Camera className="w-6 h-6 text-red-600" />
-            <span
-              className={`text-sm tracking-[0.25em] font-semibold
-              transition-colors duration-300
-              ${menuOpen ? 'text-red-600' : 'text-red-600'}`}
-            >
-              CHINKOGRAPHY
-            </span>
-          </Link>
+        CHINKOGRAPHY
+      </span>
+    </Link>
+
+    {/* (Hamburger stays exactly as you already have it) */}
+  </div>
+</header>
 
           {/* HAMBURGER */}
           <button
