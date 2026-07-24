@@ -31,7 +31,7 @@ export default function Gallery() {
     {
       id: 5,
       type: 'video',
-      url: 'https://drive.google.com/file/d/1KbX5QDDm5se1Ny9qfPQ3Z4THvBpDM2Xl/view',
+      url: 'https://drive.google.com/file/d/1r_yB8DyTm30t4XKCkgiRpIGYN-G6yGgw/view?usp=drivesdk',
       thumbnail: '/imgs/5thofit.PNG',
       title: 'A story of a Realtor',
       category: 'brand-stories',
@@ -109,15 +109,15 @@ export default function Gallery() {
 
   { id: 22, 
     type: 'video', 
-    url: 'https://drive.google.com/file/d/1tc-T8SUuGuHD_d9C6okJ6aHkgVjrtDgl/view?usp=drive_link', 
-    thumbnail: '/imgs/22ndofit.PNG', 
+    url: 'https://www.instagram.com/reel/DS4MvxZEoVr/?igsh=MTI4aDNzNXIzeDA3Mg==', 
+    thumbnail: 'imgs/22ndofit.jpeg', 
     title: 'Fashion Brand@DeeClothing', 
     category: 'commercial-films', 
   },
    { 
     id: 23, 
     type: 'video', 
-    url: 'https://drive.google.com/file/d/13Gb-6up4nytrK-i8OugmkZzmc0nDBmSh/view?usp=drive_link', 
+    url: 'https://www.instagram.com/reel/DTMx6frEhiu/?igsh=aGhuZTA3Y3dpZnF1', 
     thumbnail: '/imgs/23rdofit.PNG', 
     title: 'Fashion Brand@DeeClothing', 
     category: 'commercial-films', 
@@ -125,7 +125,7 @@ export default function Gallery() {
    { 
     id: 24, 
     type: 'video', 
-    url: 'https://drive.google.com/file/d/1OdgHHF9PInYFTakU-TyhIsF_iHFkzFBg/view?usp=drive_link', 
+    url: 'https://www.instagram.com/reel/DR2MQ0cEoL1/?igsh=MWxjbDh2Y3Nhd2preA==', 
     thumbnail: '/imgs/24thofit.PNG', 
     title: 'Fashion Brand@DeeClothing', 
     category: 'commercial-films', 
