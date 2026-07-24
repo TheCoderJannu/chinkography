@@ -110,7 +110,7 @@ export default function Gallery() {
   { id: 22, 
     type: 'video', 
     url: 'https://www.instagram.com/reel/DS4MvxZEoVr/?igsh=MTI4aDNzNXIzeDA3Mg==', 
-    thumbnail: '/imgs/pink hoodie.png', 
+    thumbnail: 'imgs/23rdofit.PNG', 
     title: 'Fashion Brand@DeeClothing', 
     category: 'commercial-films', 
   },
