@@ -108,7 +108,7 @@ export default function MyWorks() {
        id: 22, 
       type: 'video', 
       url: 'https://www.instagram.com/reel/DS4MvxZEoVr/?igsh=MTI4aDNzNXIzeDA3Mg==', 
-    thumbnail: '/imgs/020.png',  
+    thumbnail: '/imgs/pink hoodie.png',  
       title: 'Fashion Brand@DeeClothing', 
       category: 'commercial-films', 
     },
